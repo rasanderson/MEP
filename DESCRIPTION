@@ -1,0 +1,17 @@
+Package: ggveganextra
+Type: Package
+Version: 0.0.0.9000
+Title: Additional functions for vegan and ggvegan
+Version: 0.1.0
+Authors@R: person("Roy", "Sanderson", email = "roy.sanderson@newcastle.ac.uk",
+               role = c("aut", "cre"))
+Maintainer: <roy.sanderson@newcastle.ac.uk>
+Description: Additional functions for vegan and ggvegan. Focus on improved
+    graphics, such as interactive addition of species labels to some points.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    mosaic,
+    vegan,
+    ggvegan
