@@ -1,8 +1,7 @@
 Package: ggveganextra
 Type: Package
-Version: 0.0.0.9000
 Title: Additional functions for vegan and ggvegan
-Version: 0.1.0
+Version: 0.0.1
 Authors@R: person("Roy", "Sanderson", email = "roy.sanderson@newcastle.ac.uk",
                role = c("aut", "cre"))
 Maintainer: <roy.sanderson@newcastle.ac.uk>
@@ -14,4 +13,7 @@ LazyData: true
 Imports:
     mosaic,
     vegan,
-    ggvegan
+    ggvegan,
+    ggrepel,
+    grid
+RoxygenNote: 7.1.1
