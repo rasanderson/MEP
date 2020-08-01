@@ -13,7 +13,9 @@ LazyData: true
 Depends:
     mosaic,
     vegan,
-    ggvegan,
     ggrepel,
-    grid
+    grid,
+    ggvegan
+Remotes: github::gavinsimpson/ggvegan
+Dependencies: TRUE
 RoxygenNote: 7.1.1

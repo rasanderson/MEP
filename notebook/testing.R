@@ -1,6 +1,6 @@
 # Simple commands to check interactively.
 rm(list=ls())
-library(vegan)
+#library(vegan)
 library(ggveganextra)
 
 data("dune")
