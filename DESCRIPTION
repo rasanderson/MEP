@@ -10,7 +10,7 @@ Description: Additional functions for vegan and ggvegan. Focus on improved
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports:
+Depends:
     mosaic,
     vegan,
     ggvegan,

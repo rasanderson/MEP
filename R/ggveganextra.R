@@ -23,6 +23,7 @@
 #' ordi_identify(dune_plt, dune_pca, "species")
 #' @importFrom vegan rda
 #' @import ggvegan
+#' @import ggplot2
 #' @import ggrepel
 #' @importFrom ggformula gf_refine
 #' @import grid
