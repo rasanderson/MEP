@@ -1,7 +1,7 @@
 # Simple commands to check interactively.
 rm(list=ls())
 #library(vegan)
-library(ggveganextra)
+library(bio2020)
 
 data("dune")
 dune_pca <- rda(dune)
