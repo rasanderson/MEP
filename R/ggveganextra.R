@@ -2,7 +2,7 @@
 #'
 #' Interactive identify ggvegan species
 #' @param plotname Name of a plot created with ggvegan autoplot
-#' @param ordiname Result of ordination PCA, RDA, CA, CCA from rda or cca
+#' @param ordiname Result of  ordination PCA, RDA, CA, CCA from rda or cca
 #' @param display What to label. Currently only accepts "species"
 #'
 #' @details
