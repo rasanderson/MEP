@@ -14,8 +14,6 @@ Depends:
     mosaic,
     vegan,
     ggrepel,
-    grid,
-    ggvegan
-Remotes: github::gavinsimpson/ggvegan
+    grid
 Dependencies: TRUE
 RoxygenNote: 7.1.1
