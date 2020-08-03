@@ -56,9 +56,6 @@
 ##'
 ##' @author Gavin L. Simpson
 ##'
-##' @importFrom ggplot2 geom_text geom_label aes_string
-##' @importFrom ggrepel geom_text_repel geom_label_repel
-##'
 `label_fun` <- function(data,
                         geom = c("label", "text", "label_repel", "text_repel"),
                         vars) {
@@ -160,7 +157,6 @@
 ##' @param arrows logical; length 1 vector indicating if species scores should
 ##'   be drawn using arrows.
 ##'
-##' @importFrom ggplot2 geom_point geom_text
 `add_spp_site_scores` <- function(object, plt, vars, geom, draw_list, arrows) {
     wanted <- names(draw_list[c("species","sites","constraints")])
     ## if we're plotting species by arrows, drop species if in list

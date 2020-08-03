@@ -12,6 +12,10 @@ ordi_identify(plotname, ordiname, display, size = 3, ...)
 \item{ordiname}{Result of  ordination PCA, RDA, CA, CCA from rda or cca}
 
 \item{display}{What to label. Currently only accepts "species"}
+
+\item{size}{Font size of labels}
+
+\item{...}{Other parameters to function}
 }
 \value{
 The original ordiname is modified with labels
@@ -24,12 +28,14 @@ This function is designed to be run interactively. First create a standard
 ordination using rda() or cca(). Use autoplot to display the results.
 }
 \examples{
+if(interactive()){
 data(dune)
 dune_pca <- rda(dune)
-dune_plt <- autoplot(dune_pca, layers="species", geom="point", legend.position="none", arrows=FALSE)
+dune_plt <- autoplot_rda(dune_pca, layers="species", geom="point", legend.position="none", arrows=FALSE)
 dune_plt
 
 ordi_identify(dune_plt, dune_pca, "species")
+}
 }
 \author{
 Roy Sanderson, School of Natural & Environmental Science, Newcastle

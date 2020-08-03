@@ -22,16 +22,13 @@
 ##'
 ##' @export
 ##'
-##' @importFrom ggplot2 fortify
-##' @importFrom vegan scores
-##'
 ##' @examples
 ##' data(dune)
 ##' data(dune.env)
 ##'
 ##' sol <- cca(dune ~ A1 + Management, data = dune.env)
-##' head(fortify(sol))
-`fortify.cca` <- function(model, data, axes = 1:6,
+##' head(fortify_rda(sol))
+`fortify_rda` <- function(model, data, axes = 1:6,
                           display = c("sp", "wa", "lc", "bp", "cn"), ...) {
     ## extract scores
     scrs <- scores(model, choices = axes, display = display, ...)

@@ -23,27 +23,23 @@
 ##' @param caption character; caption for the plot
 ##' @param const General scaling constant to \code{rda} scores. See
 ##'   \code{\link[vegan]{scores.rda}} for details.
-##' @param ... Additional arguments passed to \code{\link{fortify.cca}}.
+##' @param ... Additional arguments passed to \code{\link{fortify_rda}}.
 ##'
 ##' @return Returns a ggplot object.
 ##'
 ##' @author Gavin L. Simpson
-##'
-##' @export
-##'
-##' @importFrom grid arrow unit
-##' @importFrom ggplot2 autoplot ggplot geom_point geom_text geom_segment labs coord_fixed aes_string
 ##'
 ##' @examples
 ##'
 ##' data(dune)
 ##'
 ##' pca <- rda(dune)
-##' autoplot(pca)
+##' autoplot_rda(pca)
 ##'
 ##' ## Just the species scores
-##' autoplot(pca, layers = "species")
-`autoplot.rda` <- function(object, axes = c(1,2), geom = c("point", "text"),
+##' autoplot_rda(pca, layers = "species")
+##' @export
+`autoplot_rda` <- function(object, axes = c(1,2), geom = c("point", "text"),
                            layers = c("species", "sites", "biplot", "centroids"),
                            arrows = TRUE, legend.position = "right",
                            title = NULL, subtitle = NULL, caption = NULL,
@@ -65,7 +61,7 @@
         }
     }
 
-    obj <- fortify(object, axes = axes, const = const, ...) # grab some scores
+    obj <- fortify_rda(object, axes = axes, const = const, ...) # grab some scores
     available <- levels(obj[["Score"]])
     draw_list <- layer_draw_list(valid, layers, available) # what are we drawing
     layer_names <- names(draw_list)[draw_list]

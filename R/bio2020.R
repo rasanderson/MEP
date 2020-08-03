@@ -4,6 +4,8 @@
 #' @param plotname Name of a plot created with ggvegan autoplot
 #' @param ordiname Result of  ordination PCA, RDA, CA, CCA from rda or cca
 #' @param display What to label. Currently only accepts "species"
+#' @param size Font size of labels
+#' @param ... Other parameters to function
 #'
 #' @details
 #' This function is designed to be run interactively. First create a standard
@@ -15,20 +17,20 @@
 #' University roy.sanderson@newcastle.ac.uk
 #'
 #' @examples
+#' if(interactive()){
 #' data(dune)
 #' dune_pca <- rda(dune)
-#' dune_plt <- autoplot(dune_pca, layers="species", geom="point", legend.position="none", arrows=FALSE)
+#' dune_plt <- autoplot_rda(dune_pca, layers="species", geom="point", legend.position="none", arrows=FALSE)
 #' dune_plt
 #'
 #' ordi_identify(dune_plt, dune_pca, "species")
-#' @importFrom vegan rda
-#' @import ggplot2
-#' @import ggrepel
-#' @importFrom ggformula gf_refine
+#' }
+#' @import vegan
 #' @import grid
+#' @export
 ordi_identify <- function(plotname, ordiname, display, size=3, ...){
   print("Click on plot to label points; hit Esc key to exit")
-    plot_data <- fortify(ordiname, display=display)
+    plot_data <- fortify_rda(ordiname, display=display)
     depth <- downViewport('panel.7-5-7-5')
     x <- plot_data[,3]
     y <- plot_data[,4]

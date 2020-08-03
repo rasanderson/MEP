@@ -1,6 +1,8 @@
 Package: bio2020
 Type: Package
 Title: Additional functions for vegan and ggvegan
+Author: person("Roy Sanderson", email = "roy.sanderson@newcastle.ac.uk",
+        role=c("aut", "cre"))
 Version: 0.0.1
 Authors@R: person("Roy", "Sanderson", email = "roy.sanderson@newcastle.ac.uk",
                role = c("aut", "cre"))
