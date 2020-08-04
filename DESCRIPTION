@@ -1,21 +1,16 @@
 Package: bio2020
 Type: Package
 Title: Additional functions for vegan and ggvegan
-Author: person("Roy Sanderson", email = "roy.sanderson@newcastle.ac.uk",
-        role=c("aut", "cre"))
 Version: 0.0.1
-Authors@R: person("Roy", "Sanderson", email = "roy.sanderson@newcastle.ac.uk",
-               role = c("aut", "cre"))
+Author: Roy Sanderson
+Authors@R: person("Roy", "Sanderson", email = "roy.sanderson@newcastle.ac.uk", role = c("aut", "cre"))
 Maintainer: <roy.sanderson@newcastle.ac.uk>
-Description: Additional functions for vegan and ggvegan. Focus on improved
-    graphics, such as interactive addition of species labels to some points.
+Description: Additional functions for vegan and ggvegan.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends:
-    mosaic,
-    vegan,
-    ggrepel,
-    grid
+Depends: mosaic, vegan, ggrepel, grid
 Dependencies: TRUE
 RoxygenNote: 7.1.1
+NeedsCompilation: no
+Packaged: 2020-08-04 10:34:10 UTC; nras
