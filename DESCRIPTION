@@ -9,7 +9,9 @@ Description: Additional functions for vegan and ggvegan.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends: mosaic, vegan, ggrepel, grid
+Imports:
+    mosaic,
+    vegan
 Dependencies: TRUE
 RoxygenNote: 7.1.1
 NeedsCompilation: no

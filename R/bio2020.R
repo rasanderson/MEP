@@ -25,7 +25,6 @@
 #'
 #' ordi_identify(dune_plt, dune_pca, "species")
 #' }
-#' @import vegan
 #' @import grid
 #' @export
 ordi_identify <- function(plotname, ordiname, display, size=3, ...){
