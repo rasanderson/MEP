@@ -26,6 +26,8 @@
 #' ordi_identify(dune_plt, dune_pca, "species")
 #' }
 #' @import grid
+#' @import mosaic
+#' @import vegan
 #' @export
 ordi_identify <- function(plotname, ordiname, display, size=3, ...){
   print("Click on plot to label points; hit Esc key to exit")

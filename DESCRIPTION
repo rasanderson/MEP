@@ -3,15 +3,12 @@ Type: Package
 Title: Additional functions for vegan and ggvegan
 Version: 0.0.1
 Author: Roy Sanderson
-Authors@R: person("Roy", "Sanderson", email = "roy.sanderson@newcastle.ac.uk", role = c("aut", "cre"))
-Maintainer: <roy.sanderson@newcastle.ac.uk>
+Maintainer: Roy Sanderson <roy.sanderson@newcastle.ac.uk>
 Description: Additional functions for vegan and ggvegan.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports:
-    mosaic,
-    vegan
+Imports: mosaic, vegan
 Dependencies: TRUE
 RoxygenNote: 7.1.1
 NeedsCompilation: no
