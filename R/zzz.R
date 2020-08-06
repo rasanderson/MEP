@@ -5,8 +5,9 @@
   if (length(setdiff(packages, rownames(utils::installed.packages()))) > 0) {
     utils::install.packages(setdiff(packages, rownames(utils::installed.packages())), repos = "https://cloud.r-project.org")
   }
-  library(mosaic)
-  library(vegan)
-  # requireNamespace("mosaic")
-  # requireNamespace("vegan")
+  suppressPackageStartupMessages(
+    c(library(mosaic, quietly = TRUE, warn.conflicts = FALSE),
+    library(vegan, quietly = TRUE))
+  )
 }
+
