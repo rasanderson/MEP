@@ -41,9 +41,9 @@
 ##' @method ordi_plot rda
 ##' @export
 ##'
-`ordi_plot.rda` <- function(object, axes = c(1,2), geom = c("point", "text"),
+`ordi_plot.rda` <- function(object, axes = c(1,2), geom = c("point"),
                            layers = c("species", "sites", "biplot", "centroids"),
-                           arrows = TRUE, legend.position = "right",
+                           arrows = FALSE, legend.position = "none",
                            title = NULL, subtitle = NULL, caption = NULL,
                            ylab, xlab, const, ...) {
     ## determine which layers to plot

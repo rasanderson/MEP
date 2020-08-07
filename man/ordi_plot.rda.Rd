@@ -7,10 +7,10 @@
 \method{ordi_plot}{rda}(
   object,
   axes = c(1, 2),
-  geom = c("point", "text"),
+  geom = c("point"),
   layers = c("species", "sites", "biplot", "centroids"),
-  arrows = TRUE,
-  legend.position = "right",
+  arrows = FALSE,
+  legend.position = "none",
   title = NULL,
   subtitle = NULL,
   caption = NULL,

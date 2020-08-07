@@ -55,3 +55,9 @@ ordi_identify <- function(plotname, ordiname, display, size=3, ...){
     }
     return(last_plot())
 }
+
+ordi_pca <- function(spp_data, ...){
+  spp_data_pca <- rda(spp_data)
+  class(spp_data_pca) <- c("rda", "cca", "pca")
+  spp_data_pca
+}
