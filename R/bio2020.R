@@ -31,7 +31,7 @@
 #' @export
 ordi_identify <- function(plotname, ordiname, display, size=3, ...){
   print("Click on plot to label points; hit Esc key to exit")
-    plot_data <- fortify_rda(ordiname, display=display)
+    plot_data <- fortify(ordiname, display=display)
     depth <- downViewport('panel.7-5-7-5')
     x <- plot_data[,3]
     y <- plot_data[,4]
