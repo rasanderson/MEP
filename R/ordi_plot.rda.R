@@ -34,12 +34,14 @@
 ##' data(dune)
 ##'
 ##' pca <- rda(dune)
-##' autoplot_rda(pca)
+##' ordi_plot(pca)
 ##'
 ##' ## Just the species scores
-##' autoplot_rda(pca, layers = "species")
+##' ordi_plot.rda(pca, layers = "species")
+##' @method ordi_plot rda
 ##' @export
-`autoplot_rda` <- function(object, axes = c(1,2), geom = c("point", "text"),
+##'
+`ordi_plot.rda` <- function(object, axes = c(1,2), geom = c("point", "text"),
                            layers = c("species", "sites", "biplot", "centroids"),
                            arrows = TRUE, legend.position = "right",
                            title = NULL, subtitle = NULL, caption = NULL,

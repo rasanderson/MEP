@@ -106,6 +106,29 @@
     c("species", "sites", "constraints", "biplot", "centroids", "regression")
 }
 
+# ##' @title ordination plots
+# ##'
+# ##' @param object An R objext.
+# ##' @param ... Additional arguments
+# ##'
+##' @rdname ordi_plot
+##' @export
+`ordi_plot` <- function(...){
+    UseMethod('ordi_plot')
+}
+#
+# ##' @rdname ordi_plot
+# ##' @export
+# `ordi_plot.rda` <- function(...){
+#     UseMethod('ordi_plot')
+# }
+#
+# ##' @rdname ordi_plot
+# ##' @export
+# `ordi_plot.cca` <- function(...){
+#     UseMethod('ordi_plot')
+# }
+
 ##' @title Check user-supplied layers against list of valid layers
 ##'
 ##' @param user character; vector of user supplied layer names.

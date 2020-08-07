@@ -31,7 +31,7 @@ ordination using rda() or cca(). Use autoplot to display the results.
 if(interactive()){
 data(dune)
 dune_pca <- rda(dune)
-dune_plt <- autoplot_rda(dune_pca, layers="species", geom="point", legend.position="none", arrows=FALSE)
+dune_plt <- ordi_plot(dune_pca, layers="species", geom="point", legend.position="none", arrows=FALSE)
 dune_plt
 
 ordi_identify(dune_plt, dune_pca, "species")
