@@ -20,6 +20,7 @@
 ##' The first two components are the axis scores.
 ##' @author Gavin L. Simpson
 ##'
+##' @method fortify cca
 ##' @export
 ##'
 ##' @examples
@@ -28,7 +29,7 @@
 ##'
 ##' sol <- cca(dune ~ A1 + Management, data = dune.env)
 ##' head(fortify(sol))
-`fortify` <- function(model, data, axes = 1:6,
+`fortify.cca` <- function(model, data, axes = 1:6,
                           display = c("sp", "wa", "lc", "bp", "cn"), ...) {
     ## extract scores
     scrs <- scores(model, choices = axes, display = display, ...)
