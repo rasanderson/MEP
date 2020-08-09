@@ -1,15 +1,20 @@
 #' Interactive identify
 #'
 #' Interactive identify ggvegan species
-#' @param plotname Name of a plot created with ggvegan autoplot
-#' @param ordiname Result of  ordination PCA, RDA, CA, CCA from rda or cca
-#' @param display What to label. Currently only accepts "species"
-#' @param size Font size of labels
-#' @param ... Other parameters to function
+#' @param plotname Name of a plot created with \code{\link{ordi_plot}}
+#' @param size Font size of labels (default = 3)
+#' @param ... Other optional parameters
 #'
 #' @details
 #' This function is designed to be run interactively. First create a standard
-#' ordination using rda() or cca(). Use autoplot to display the results.
+#' ordination using \code{\link{ordi_pca}}, \code{\link{ordi_rda}},
+#' \code{\link{ordi_ca}}, \code{\link{ordi_cca}} or \code{\link{ordi_nmds}}.
+#' Then call \code{\link{ordi_plot}} but make sure that the plot results is
+#' stored in an R object. Then apply this function to that object, and hit the
+#' \emph{Esc} key to exit function.
+#' \strong{Note:} In RStudio only the most recently displayed plot can be
+#' labelled with this function, so avoid using the back arrow keys in the RStudio
+#' plot window.
 #'
 #' @return The original ordiname is modified with labels
 #'
@@ -18,21 +23,28 @@
 #'
 #' @examples
 #' if(interactive()){
-#' data(dune)
-#' dune_pca <- rda(dune)
-#' dune_plt <- ordi_plot(dune_pca, layers="species", geom="point", legend.position="none", arrows=FALSE)
-#' dune_plt
 #'
-#' ordi_identify(dune_plt, dune_pca, "species")
+#' # Unconstrained ordination
+#' data(dune)
+#' data(dune.env)
+#' dune_pca <- ordi_pca(dune)
+#' dune_plt <- ordi_plot(dune_pca, layers="species") # defaults to sites and species
+#' dune_plt  # Display the plot
+#' ordi_identify(dune_plt) # Hit Esc key to exit
+#'
+#' # Constrained ordination
+#' dune_rda <- ordi_rda(dune ~ A1 + Management, data=dune.env)
+#' dune_plt <- ordi_plot(dune_rda, layers="species") # displays spp and constraints
+#' dune_plt  # Display the plot
+#' ordi_identify(dune_plt) # Hit Esc key to exit
+#'
 #' }
 #' @import grid
 #' @import mosaic
 #' @import vegan
 #' @export
-#ordi_identify <- function(plotname, ordiname, display, size=3, ...){
-ordi_identify <- function(plotname, display, size=3, ...){
+ordi_identify <- function(plotname, size=3, ...){
     print("Click on plot to label points; hit Esc key to exit")
-#    plot_data <- fortify(ordiname, display=display)
     plot_data <- plotname[["layers"]][[1]]$data
     depth <- downViewport('panel.7-5-7-5')
     x <- plot_data[,3]

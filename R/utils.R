@@ -106,17 +106,16 @@
     c("species", "sites", "constraints", "biplot", "centroids", "regression")
 }
 
-# ##' @title ordination plots
-# ##'
-# ##' @param object An R objext.
-# ##' @param ... Additional arguments
-# ##'
-##' @rdname ordi_plot
-##' @export
+##' @title ordination plots
+##'
+##' @param ... Additional arguments
+##'
+#' @rdname ordi_plot
+#' @export
 `ordi_plot` <- function(...){
     UseMethod('ordi_plot')
 }
-#
+
 # ##' @rdname ordi_plot
 # ##' @export
 # `ordi_plot.rda` <- function(...){
