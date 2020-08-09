@@ -4,18 +4,18 @@
 \alias{ordi_identify}
 \title{Interactive identify}
 \usage{
-ordi_identify(plotname, ordiname, display, size = 3, ...)
+ordi_identify(plotname, display, size = 3, ...)
 }
 \arguments{
 \item{plotname}{Name of a plot created with ggvegan autoplot}
-
-\item{ordiname}{Result of  ordination PCA, RDA, CA, CCA from rda or cca}
 
 \item{display}{What to label. Currently only accepts "species"}
 
 \item{size}{Font size of labels}
 
 \item{...}{Other parameters to function}
+
+\item{ordiname}{Result of  ordination PCA, RDA, CA, CCA from rda or cca}
 }
 \value{
 The original ordiname is modified with labels
