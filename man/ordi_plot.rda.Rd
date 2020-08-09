@@ -50,7 +50,7 @@ ignored if \code{arrows = TRUE}.}
 \item{const}{General scaling constant to \code{rda} scores. See
 \code{\link[vegan]{scores.rda}} for details.}
 
-\item{...}{Additional arguments passed to \code{\link{fortify_rda}}.}
+\item{...}{Additional arguments passed to \code{\link{fortify}}.}
 }
 \value{
 Returns a ggplot object.
@@ -65,11 +65,11 @@ TODO
 
 data(dune)
 
-pca <- rda(dune)
+pca <- ordi_rda(dune)
 ordi_plot(pca)
 
 ## Just the species scores
-ordi_plot.rda(pca, layers = "species")
+ordi_plot(pca, layers = "species")
 }
 \author{
 Gavin L. Simpson

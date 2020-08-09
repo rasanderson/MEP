@@ -57,7 +57,7 @@ TODO
 data(dune)
 data(dune.env)
 
-sol <- cca(dune ~ A1 + Management, data = dune.env)
+sol <- ordi_cca(dune ~ A1 + Management, data = dune.env)
 ordi_plot(sol)
 }
 \author{

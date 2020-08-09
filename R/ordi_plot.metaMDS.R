@@ -37,7 +37,7 @@
 ##' ## load example data
 ##' data(dune)
 ##'
-##' sol <- metaMDS(dune)
+##' sol <- ordi_nmds(dune)
 ##' ordi_plot(sol)
 `ordi_plot.metaMDS` <- function(object, axes = c(1,2), geom = c("point"),
                                layers = c("species", "sites"),

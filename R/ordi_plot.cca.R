@@ -33,7 +33,7 @@
 ##' data(dune)
 ##' data(dune.env)
 ##'
-##' sol <- cca(dune ~ A1 + Management, data = dune.env)
+##' sol <- ordi_cca(dune ~ A1 + Management, data = dune.env)
 ##' ordi_plot(sol)
 `ordi_plot.cca` <- function(object, axes = c(1,2), geom = c("point"),
                            layers = c("species", "sites", "biplot", "centroids"),

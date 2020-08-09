@@ -23,7 +23,7 @@
 ##' @param caption character; caption for the plot
 ##' @param const General scaling constant to \code{rda} scores. See
 ##'   \code{\link[vegan]{scores.rda}} for details.
-##' @param ... Additional arguments passed to \code{\link{fortify_rda}}.
+##' @param ... Additional arguments passed to \code{\link{fortify}}.
 ##'
 ##' @return Returns a ggplot object.
 ##'
@@ -33,11 +33,11 @@
 ##'
 ##' data(dune)
 ##'
-##' pca <- rda(dune)
+##' pca <- ordi_rda(dune)
 ##' ordi_plot(pca)
 ##'
 ##' ## Just the species scores
-##' ordi_plot.rda(pca, layers = "species")
+##' ordi_plot(pca, layers = "species")
 ##' @method ordi_plot rda
 ##' @export
 ##'
