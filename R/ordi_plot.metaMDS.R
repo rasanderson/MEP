@@ -39,9 +39,9 @@
 ##'
 ##' sol <- metaMDS(dune)
 ##' ordi_plot(sol)
-`ordi_plot.metaMDS` <- function(object, axes = c(1,2), geom = c("point","text"),
+`ordi_plot.metaMDS` <- function(object, axes = c(1,2), geom = c("point"),
                                layers = c("species", "sites"),
-                               legend.position = "right",
+                               legend.position = "none",
                                title = NULL, subtitle = NULL, caption = NULL,
                                ylab, xlab, ...) {
     axes <- rep(axes, length.out = 2L)

@@ -7,9 +7,9 @@
 \method{ordi_plot}{cca}(
   object,
   axes = c(1, 2),
-  geom = c("point", "text"),
+  geom = c("point"),
   layers = c("species", "sites", "biplot", "centroids"),
-  legend.position = "right",
+  legend.position = "none",
   title = NULL,
   subtitle = NULL,
   caption = NULL,
