@@ -41,7 +41,7 @@
 ##' @method ordi_plot rda
 ##' @export
 ##'
-`ordi_plot.rda` <- function(object, axes = c(1,2), geom = c("point"),
+`ordi_plot.rda` <- function(object, axes = c(1,2), geom = c("point", "text"),
                            layers = c("species", "sites", "biplot", "centroids"),
                            arrows = FALSE, legend.position = "none",
                            title = NULL, subtitle = NULL, caption = NULL,
