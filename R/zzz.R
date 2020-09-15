@@ -7,7 +7,7 @@
   }
   suppressPackageStartupMessages(
     c(library(mosaic, quietly = TRUE, warn.conflicts = FALSE),
-      library(car, quietyly = TRUE),
+      library(car, quietly = TRUE),
       library(vegan, quietly = TRUE))
   )
 }
