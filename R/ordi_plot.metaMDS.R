@@ -39,7 +39,7 @@
 ##'
 ##' sol <- ordi_nmds(dune)
 ##' ordi_plot(sol)
-`ordi_plot.metaMDS` <- function(object, axes = c(1,2), geom = c("point"),
+`ordi_plot.metaMDS` <- function(object, axes = c(1,2), geom = c("point", "text"),
                                layers = c("species", "sites"),
                                legend.position = "none",
                                title = NULL, subtitle = NULL, caption = NULL,

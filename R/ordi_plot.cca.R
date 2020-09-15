@@ -35,7 +35,7 @@
 ##'
 ##' sol <- ordi_cca(dune ~ A1 + Management, data = dune.env)
 ##' ordi_plot(sol)
-`ordi_plot.cca` <- function(object, axes = c(1,2), geom = c("point"),
+`ordi_plot.cca` <- function(object, axes = c(1,2), geom = c("point", "text"),
                            layers = c("species", "sites", "biplot", "centroids"),
                            legend.position = "none",
                            title = NULL, subtitle = NULL, caption = NULL,
