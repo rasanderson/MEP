@@ -154,4 +154,15 @@ ordi_scores <- function(ordi_object, ...){
   fortify(ordi_object, ...)
 }
 
-
+#' Stepwise selection of constrained ordination
+#'
+#' Wrapper function with vegan for ordistep
+#' @param ordi_object Either a cca or rda object
+#' @param ... Other options to function
+#'
+#' @details To be written
+#'
+#' @export
+ordi_step <- function(ordi_object, ...){
+  ordistep(ordi_object, ...)
+}
