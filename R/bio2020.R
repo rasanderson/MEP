@@ -208,7 +208,7 @@ ordi_step <- function(ordi_object, ...){
 #' @import grid
 #' @import mosaic
 #' @export
-multi_plot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
+multi_plot <- function(..., plotlist=NULL, cols=1, layout=NULL) {
   library(grid)
 
   # Make a list from the ... arguments and plotlist
