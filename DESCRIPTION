@@ -1,7 +1,7 @@
 Package: bio2020
 Type: Package
 Title: Additional functions for vegan and ggvegan
-Version: 0.0.2
+Version: 0.0.3
 Author: Roy Sanderson
 Maintainer: Roy Sanderson <roy.sanderson@newcastle.ac.uk>
 Description: Additional functions for vegan and ggvegan.
