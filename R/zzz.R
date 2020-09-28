@@ -5,10 +5,10 @@
   # if (length(setdiff(packages, rownames(utils::installed.packages()))) > 0) {
   #   utils::install.packages(setdiff(packages, rownames(utils::installed.packages())), repos = "https://cloud.r-project.org")
   # }
-  # suppressPackageStartupMessages(
-  #   c(library(mosaic, quietly = TRUE, warn.conflicts = FALSE),
-  #     library(car, quietly = TRUE),
-  #     library(vegan, quietly = TRUE))
-  # )
+  suppressPackageStartupMessages(
+    c(library(mosaic, quietly = TRUE, warn.conflicts = FALSE),
+      library(car, quietly = TRUE),
+      library(vegan, quietly = TRUE))
+  )
 }
 

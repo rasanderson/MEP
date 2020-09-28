@@ -25,7 +25,7 @@
 ##'
 ##' @examples
 ##' ## load example data
-##' library(vegan)
+##' require(vegan)
 ##' data(dune)
 ##'
 ##' ord <- metaMDS(dune)

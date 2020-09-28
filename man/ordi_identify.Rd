@@ -28,7 +28,8 @@ stored in an R object. Then apply this function to that object, and hit the
 \emph{Esc} key to exit function.
 \strong{Note:} In RStudio only the most recently displayed plot can be
 labelled with this function, so avoid using the back arrow keys in the RStudio
-plot window.
+plot window. Labelling may not always occur on first click, and is more
+difficult on constrained ordination plots.
 }
 \examples{
 if(interactive()){
@@ -37,13 +38,15 @@ if(interactive()){
 data(dune)
 data(dune.env)
 dune_pca <- ordi_pca(dune)
-dune_plt <- ordi_plot(dune_pca, layers="species") # defaults to sites and species
+dune_plt <- ordi_plot(dune_pca, layers="species", geom="point") # defaults to sites and species
 dune_plt  # Display the plot
 ordi_identify(dune_plt) # Hit Esc key to exit
 
 # Constrained ordination
 dune_rda <- ordi_rda(dune ~ A1 + Management, data=dune.env)
-dune_plt <- ordi_plot(dune_rda, layers="species") # displays spp and constraints
+# displays spp and constraints.
+# Constraints are "biplot" for continuous and "centroids" for categorical
+dune_plt <- ordi_plot(dune_rda, layers=c("species", "biplot", "centroids"), geom="point")
 dune_plt  # Display the plot
 ordi_identify(dune_plt) # Hit Esc key to exit
 
