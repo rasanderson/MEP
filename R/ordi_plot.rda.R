@@ -30,7 +30,7 @@
 ##' @author Gavin L. Simpson
 ##'
 ##' @examples
-##'
+##' library(vegan)
 ##' data(dune)
 ##'
 ##' pca <- ordi_rda(dune)

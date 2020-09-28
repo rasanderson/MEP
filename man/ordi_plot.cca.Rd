@@ -54,6 +54,7 @@ Produces a multi-layer ggplot object representing the output of objects produced
 TODO
 }
 \examples{
+library(vegan)
 data(dune)
 data(dune.env)
 

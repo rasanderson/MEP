@@ -24,6 +24,7 @@
 ##' @export
 ##'
 ##' @examples
+##' library(vegan)
 ##' data(dune)
 ##' data(dune.env)
 ##'
