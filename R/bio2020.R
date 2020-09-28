@@ -243,3 +243,16 @@ multi_plot <- function(..., plotlist=NULL, cols=1, layout=NULL) {
     }
   }
 }
+
+#' Type 3 Sums of squares
+#'
+#' Wrapper function with car for Anova
+#' @param lm_mod Results of lm function
+#' @param ... Other options to function
+#'
+#' @details To be written
+#'
+#' @export
+anova3 <- function(lm_mod, ...){
+  Anova(lm_mod, ...)
+}

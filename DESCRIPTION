@@ -8,7 +8,8 @@ Description: Additional functions for vegan and ggvegan.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports: ggplot2, mosaic, vegan
+Depends: car, ggplot2, mosaic, vegan
+Imports: car, ggplot2, mosaic, vegan
 Dependencies: TRUE
 RoxygenNote: 7.1.1
 NeedsCompilation: no
