@@ -1,12 +1,13 @@
+##' @rdname ordi_plot
 ##' @title ggplot-based plot for objects of class \code{'rda'}
 ##'
 ##' @description
-##' Produces a multi-layer ggplot object representing the output of objects produced by \code{\link[vegan]{rda}}.
+##' Produces a multi-layer ggplot object representing the output of objects produced by \code{\link[vegan]{cca}}.
 ##'
 ##' @details
 ##' TODO
 ##'
-##' @param object an object of class \code{"rda"}, the result of a call to \code{\link[vegan]{rda}}
+##' @param object an object of class \code{"cca"}, the result of a call to \code{\link[vegan]{cca}}
 ##' @param axes numeric; which axes to plot, given as a vector of length 2.
 ##' @param geom character; which geoms to use for the layers. Can be a vector of
 ##'   up to length 2, in which case, the first element of \code{geom} will be
@@ -21,19 +22,25 @@
 ##' @param title character; subtitle for the plot
 ##' @param subtitle character; subtitle for the plot
 ##' @param caption character; caption for the plot
-##' @param const General scaling constant to \code{rda} scores. See
-##'   \code{\link[vegan]{scores.rda}} for details.
+##' @param const General scaling constant to \code{cca} scores. See
+##'   \code{\link[vegan]{scores}} for details.
 ##' @param ... Additional arguments passed to \code{\link{fortify}}.
 ##'
 ##' @return Returns a ggplot object.
 ##'
-##' @author Gavin L. Simpson
+##' @author Gavin L. Simpson, Roy Sanderson
+##'
 ##'
 ##' @examples
+##'
+##' # Principal components analysis
 ##' require(vegan)
+##' require(ggformula)
+##' require(ggrepel)
+##'
 ##' data(dune)
 ##'
-##' pca <- ordi_rda(dune)
+##' pca <- ordi_pca(dune)
 ##' ordi_plot(pca)
 ##'
 ##' ## Just the species scores

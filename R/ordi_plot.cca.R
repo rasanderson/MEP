@@ -1,11 +1,12 @@
-##' @title ggplot-based plot for objects of class \code{"cca"}
-##'
-##' @description
-##' Produces a multi-layer ggplot object representing the output of objects produced by \code{\link[vegan]{cca}}, or \code{\link[vegan]{capscale}}.
-##'
-##' @details
-##' TODO
-##'
+##' @rdname ordi_plot
+##' @title ggplot-based plot for objects of class \code{"cca"} and \code{"rda"}
+# #'
+# #' @description
+# #' Produces a multi-layer ggplot object representing the output of objects produced by \code{\link[vegan]{cca}}, or \code{\link[vegan]{capscale}}.
+# #'
+# #' @details
+# #' TODO
+# #'
 ##' @param object an object of class \code{"cca"}, the result of a call to \code{\link[vegan]{cca}} or \code{\link[vegan]{capscale}}.
 ##' @param axes numeric; which axes to plot, given as a vector of length 2.
 ##' @param geom character; which geoms to use for the layers. Can be a
@@ -20,17 +21,22 @@
 ##' @param subtitle character; subtitle for the plot
 ##' @param caption character; caption for the plot
 ##' @param ... Additional arguments passed to \code{\link{fortify.cca}}.
-##' @return Returns a ggplot object.
-##' @author Gavin L. Simpson
+# #' @return Returns a ggplot object.
+# #' @author Gavin L. Simpson
 ##'
 ##' @method ordi_plot cca
 ##' @export
 ##'
 ##' @importFrom grid arrow unit
-##' @importFrom ggplot2 autoplot ggplot geom_point geom_text geom_segment labs coord_fixed aes_string
+##' @importFrom ggplot2 autoplot ggplot geom_point geom_text geom_segment labs coord_fixed aes_string theme
 ##'
 ##' @examples
+##'
+##' # Canonical correspondence analysis
 ##' require(vegan)
+##' require(ggformula)
+##' require(ggrepel)
+##'
 ##' data(dune)
 ##' data(dune.env)
 ##'
@@ -126,5 +132,3 @@
     plt <- plt + theme(legend.position = legend.position)
     plt
 }
-
-## `aplot.cca` <- `ordi_plot.cca`

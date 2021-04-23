@@ -1,14 +1,14 @@
-Package: bio2020
+Package: MEP
 Type: Package
-Title: Additional functions for vegan and ggvegan
-Version: 0.0.3
+Title: Modelling, Evidence and Policy Group R package
+Version: 0.0.1
 Author: Roy Sanderson
 Maintainer: Roy Sanderson <roy.sanderson@newcastle.ac.uk>
-Description: Additional functions for vegan and ggvegan.
+Description: Useful utilities used by Team MEP. Mainly graphics functions currently, but will be expanded.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports: car, ggplot2, mosaic, vegan, grid
+Imports: ggplot2, vegan, grid
 Dependencies: TRUE
 RoxygenNote: 7.1.1
 NeedsCompilation: no

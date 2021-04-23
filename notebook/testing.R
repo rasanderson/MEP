@@ -2,7 +2,7 @@
 # Need to get this working properly for different geoms
 rm(list=ls())
 #library(vegan)
-library(bio2020)
+library(MEP)
 
 data("dune")
 dune_pca <- ordi_pca(dune)

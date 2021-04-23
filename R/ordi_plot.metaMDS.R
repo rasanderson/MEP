@@ -21,7 +21,7 @@
 ##' @param title character; subtitle for the plot
 ##' @param subtitle character; subtitle for the plot
 ##' @param caption character; caption for the plot
-##' @param ... Additional arguments passed to \code{\link{fortify.metaMDS}}.
+##' @param ... Additional arguments passed to \code{\link{fortify}}.
 ##'
 ##' @return Returns a ggplot object.
 ##'
@@ -36,6 +36,8 @@
 ##' @examples
 ##' ## load example data
 ##' require(vegan)
+##' require(ggformula)
+##' require(ggrepel)
 ##' data(dune)
 ##'
 ##' sol <- ordi_nmds(dune)
