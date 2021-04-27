@@ -1,6 +1,6 @@
-#' Interactive identify
+#' Interactive identify an ordination plot
 #'
-#' Interactive identify ggvegan species
+#' Interactive identify a species (attributes) and sites (samples) plot
 #' @param plotname Name of a plot created with \code{\link{ordi_plot}}
 #' @param size Font size of labels (default = 3)
 #' @param ... Other optional parameters
@@ -85,9 +85,18 @@ ordi_identify <- function(plotname, size=3, ...){
 #' @param spp_data Dataframe of attributes (columns) by samples (rows)
 #' @param ... Other options to function
 #'
-#' @details To be written
+#' @details This is linear unconstrained ordination. It actually calls the
+#' \code{\link{rda}} function from `vegan`, so is a wrapper function. It simply
+#' provides a more consistent naming convention.
 #'
 #' @return A vegan rda object
+#' @examples
+#' # Unconstrained ordination with PCA
+#' require(vegan)
+#'
+#' data(dune)
+#' data(dune.env)
+#' dune_pca <- ordi_pca(dune)
 #'
 #' @author Roy Sanderson, School of Natural & Environmental Science, Newcastle
 #' University roy.sanderson@newcastle.ac.uk
@@ -105,7 +114,8 @@ ordi_pca <- function(spp_data, ...){
 #'
 #' Wrapper function with vegan for RDA
 # #' @param formula Dataframe of attributes (columns) by samples (rows) as
-# #'response and one or more explanatory variables from a second dataframe
+# #' response and one or more explanatory variables from a second dataframe
+# #' @data data.frame of rows and columns containing explatory variables.
 ##' @param ... Other options to function
 #'
 #' @details To be written

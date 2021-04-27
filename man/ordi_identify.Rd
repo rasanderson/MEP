@@ -2,7 +2,7 @@
 % Please edit documentation in R/MEP.R
 \name{ordi_identify}
 \alias{ordi_identify}
-\title{Interactive identify}
+\title{Interactive identify an ordination plot}
 \usage{
 ordi_identify(plotname, size = 3, ...)
 }
@@ -17,7 +17,7 @@ ordi_identify(plotname, size = 3, ...)
 The original ordiname is modified with labels
 }
 \description{
-Interactive identify ggvegan species
+Interactive identify a species (attributes) and sites (samples) plot
 }
 \details{
 This function is designed to be run interactively. First create a standard
