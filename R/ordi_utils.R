@@ -72,12 +72,12 @@
                                                     y = vars[2],
                                                     label = 'Label')),
                  label_repel =
-                     geom_label_repel(data = data,
+                     ggrepel::geom_label_repel(data = data,
                                       mapping = aes_string(x = vars[1],
                                                            y = vars[2],
                                                           label = 'Label')),
                  text_repel =
-                     geom_text_repel(data = data,
+                     ggrepel::geom_text_repel(data = data,
                                     mapping = aes_string(x = vars[1],
                                                          y = vars[2],
                                                          label = 'Label'))
