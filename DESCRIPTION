@@ -4,15 +4,16 @@ Title: Modelling, Evidence and Policy Group R package
 Version: 0.0.1
 Author: Roy Sanderson
 Maintainer: Roy Sanderson <roy.sanderson@newcastle.ac.uk>
-Description: Useful utilities used by Team MEP. Mainly graphics functions currently, but will be expanded.
+Description: Useful utilities used by Team MEP. Mainly graphics functions currently,
+    but will be expanded.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Depends:
     ggplot2,
-    vegan
+    vegan,
+    grid
 Imports:
-    grid,
     ggformula,
     ggrepel
 Dependencies: TRUE
