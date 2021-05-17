@@ -1,11 +1,3 @@
-# Function for convex hull
-StatChull <- ggproto("StatChull", Stat,
-                     compute_group = function(data, scales) {
-                       data[chull(data$x, data$y), , drop = FALSE]
-                     },
-
-                     required_aes = c("x", "y")
-)
 geom_chull <- function(mapping = NULL, data = NULL, geom = "polygon",
                        position = "identity", na.rm = FALSE, show.legend = NA,
                        inherit.aes = TRUE, ...) {
@@ -15,3 +7,11 @@ geom_chull <- function(mapping = NULL, data = NULL, geom = "polygon",
     params = list(na.rm = na.rm, ...)
   )
 }
+# Function for convex hull
+StatChull <- ggproto("StatChull", Stat,
+                     compute_group = function(data, scales) {
+                       data[chull(data$x, data$y), , drop = FALSE]
+                     },
+
+                     required_aes = c("x", "y")
+)
