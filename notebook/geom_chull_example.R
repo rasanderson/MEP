@@ -14,5 +14,5 @@ dune_sco <- mutate(dune_sco, Use = dune.env$Use)
 
 ggplot(dune_sco, aes(x=PC1, y=PC2, fill=Use)) +
   geom_point() +
-  geom_chull(alpha=0.5) + # What do you think alpha does??
-  theme_classic()  # Add this if you don't like the grey background!
+  geom_chull(alpha = 0.5) +
+  theme_classic()
