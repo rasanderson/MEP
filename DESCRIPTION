@@ -16,6 +16,7 @@ Depends:
 Imports:
     ggformula,
     ggrepel,
+    dplyr,
     rlang
 Dependencies: TRUE
 RoxygenNote: 7.1.1

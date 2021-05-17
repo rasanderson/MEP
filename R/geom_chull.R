@@ -7,7 +7,7 @@
 #' @param position defaults to identity (no change to original)
 #' @param na.rm defaults to FALSE
 #' @param show.legend defaults to NA
-#' @param inherits.aes defaults to TRUE (e.g. from aes in main ggplot call)
+#' @param inherit.aes defaults to TRUE (e.g. from aes in main ggplot call)
 #' @param ... Other standard ggplot2 plotting options
 #'
 #' @details
@@ -24,8 +24,7 @@
 #'
 #' @examples
 #' # Classic dune vegetation example
-#' library(vegan)
-#' library(dplyr)
+#' require(dplyr)
 #'
 #' data(dune)
 #' data(dune.env)
