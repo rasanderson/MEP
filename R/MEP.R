@@ -13,9 +13,9 @@
 #' stored in an R object. Then apply this function to that object, and hit the
 #' \emph{Esc} key to exit function.
 #' \strong{Note:} In RStudio only the most recently displayed plot can be
-#' labelled with this function, so avoid using the back arrow keys in the RStudio
-#' plot window. Labelling may not always occur on first click, and is more
-#' difficult on constrained ordination plots.
+#' labelled with this function, so avoid using the back arrow keys in the
+#' RStudio plot window. Labelling may not always occur on first click, and is
+#' more difficult on constrained ordination plots.
 #'
 #' @return The original ordiname is modified with labels
 #'
@@ -113,12 +113,11 @@ ordi_pca <- function(spp_data, ...){
 #' Redundancy analysis
 #'
 #' Wrapper function with vegan for RDA
-# #' @param formula Dataframe of attributes (columns) by samples (rows) as
-# #' response and one or more explanatory variables from a second dataframe
-# #' @data data.frame of rows and columns containing explatory variables.
-##' @param ... Other options to function
+#' @param ... Other options to function
 #'
-#' @details To be written
+#' @details This acts as a wrapper to the standard \code{\link{rda}} function
+#' from the `vegan` package, which you should study for detailed documentation.
+#' This version is for constrained linear ordination via redundancy analysis.
 #'
 #' @author Roy Sanderson, School of Natural & Environmental Science, Newcastle
 #' University roy.sanderson@newcastle.ac.uk
@@ -135,7 +134,9 @@ ordi_rda <- {
 #' @param spp_data Dataframe of attributes (columns) by samples (rows)
 #' @param ... Other options to function
 #'
-#' @details To be written
+#' @details This acts as a wrapper to the standard \code{\link{cca}} function
+#' from the `vegan` package, which you should study for detailed documentation.
+#' This version is designed for unconstrained unimodal correspondence analysis.
 #'
 #' @export
 ordi_ca <- function(spp_data, ...){
@@ -147,11 +148,12 @@ ordi_ca <- function(spp_data, ...){
 #' Canonical correspondence analysis
 #'
 #' Wrapper function with vegan for CCA
-# #' @param formula Dataframe of attributes (columns) by samples (rows) as response
-# #' and one or more explanatory variables from a second dataframe
 #' @param ... Other options to function
 #'
-#' @details To be written
+#' @details This acts as a wrapper to the standard \code{\link{cca}} function
+#' from the `vegan` package, which you should study for detailed documentation.
+#' This version is for constrained unimodal ordination via canonical
+#' correspondence analysis.
 #'
 #' @export
 ordi_cca <- {
@@ -177,7 +179,12 @@ ordi_nmds <- function(spp_data, ...){
 #' @param ordi_object Result of ordination
 #' @param ... Other options to function
 #'
-#' @details To be written
+#' @details This is a wrapper function for \code{\link{cca}} in the `vegan`
+#' package. It differs in that the returned object is a data.frame rather
+#' than a list. This makes it much simpler to use in `ggplot2`, linear models
+#' and subsequent analyses. By default sites (samples), species (attributes)
+#' and (where applicable) constraining variable scores are returned for both
+#' axes 1 and axes 2 of the ordination.
 #'
 #' @export
 ordi_scores <- function(ordi_object, ...){
@@ -190,7 +197,8 @@ ordi_scores <- function(ordi_object, ...){
 #' @param ordi_object Either a cca or rda object
 #' @param ... Other options to function
 #'
-#' @details To be written
+#' @details Wrapper function for the \code{\link{ordistep}} function in `vegan`
+#' and its usage is identical
 #'
 #' @export
 ordi_step <- function(ordi_object, ...){
