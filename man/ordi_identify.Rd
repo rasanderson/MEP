@@ -27,9 +27,9 @@ Then call \code{\link{ordi_plot}} but make sure that the plot results is
 stored in an R object. Then apply this function to that object, and hit the
 \emph{Esc} key to exit function.
 \strong{Note:} In RStudio only the most recently displayed plot can be
-labelled with this function, so avoid using the back arrow keys in the RStudio
-plot window. Labelling may not always occur on first click, and is more
-difficult on constrained ordination plots.
+labelled with this function, so avoid using the back arrow keys in the
+RStudio plot window. Labelling may not always occur on first click, and is
+more difficult on constrained ordination plots.
 }
 \examples{
 \dontrun{
