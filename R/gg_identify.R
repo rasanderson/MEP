@@ -2,15 +2,16 @@ gg_identify <- function(plotname, labels, size=3, ...){
   if(is.null(labels)){
     # Triggers error if labels argument not given
   }
-  print("Click on plot to label points; hit Esc key to exit")
+  print("Double-click on plot to label points; hit Esc key to exit")
   plot_data <- plotname$data
   depth <- downViewport('panel.7-5-7-5')
-  x <- rlang::quo_get_expr(plotname$mapping$x)
-  y <- rlang::quo_get_expr(plotname$mapping$y)
+  xvar <- as.character(rlang::quo_get_expr(plotname$mapping$x))
+  yvar <- as.character(rlang::quo_get_expr(plotname$mapping$y))
+  x <- plotname$data[,xvar]
+  y <- plotname$data[,yvar]
   labels <- labels
-  dVp <- dataViewport(x,y)
-  pushViewport(dVp)
-  #pushViewport(dataViewport(x,y))
+  print(labels)
+  pushViewport(dataViewport(x,y))
   pick <- grid.locator('in')
   while(!is.null(pick)){
     tmp <- grid.locator('in')
