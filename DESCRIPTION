@@ -15,7 +15,9 @@ Depends:
     grid
 Imports:
     ggformula,
-    ggrepel
+    ggrepel,
+    dplyr,
+    rlang
 Dependencies: TRUE
 RoxygenNote: 7.1.1
 NeedsCompilation: no
