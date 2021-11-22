@@ -59,29 +59,29 @@
 # #' @importFrom ggrepel geom_label_repel, geom_text_repel
 `label_fun` <- function(data,
                         geom = c("label", "text", "label_repel", "text_repel"),
-                        vars) {
+                        vars, size = 3) {
     ll <- switch(geom,
                  label =
                      geom_label(data = data,
                                 mapping = aes_string(x = vars[1],
                                                      y = vars[2],
-                                                     label = 'Label')),
+                                                     label = 'Label'), size=size),
                  text =
                      geom_text(data = data,
                                mapping = aes_string(x = vars[1],
                                                     y = vars[2],
-                                                    label = 'Label')),
+                                                    label = 'Label'), size=size),
                  label_repel =
                      ggrepel::geom_label_repel(data = data,
-                                      mapping = aes_string(x = vars[1],
-                                                           y = vars[2],
-                                                          label = 'Label')),
+                                               mapping = aes_string(x = vars[1],
+                                                                    y = vars[2],
+                                                                    label = 'Label'), size=size),
                  text_repel =
                      ggrepel::geom_text_repel(data = data,
-                                    mapping = aes_string(x = vars[1],
-                                                         y = vars[2],
-                                                         label = 'Label'))
-                 )
+                                              mapping = aes_string(x = vars[1],
+                                                                   y = vars[2],
+                                                                   label = 'Label'), size=size)
+    )
     ll
 }
 
